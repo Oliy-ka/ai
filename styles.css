@@ -1,0 +1,305 @@
+/* Загальні стилі */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ccf5ff; /* Молочний фон */
+  }
+  
+  header {
+    background-color: #6c6c6c; /* Темно-зелений */
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: #FFFFFF; /* Жовтогарячий */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #ccf5ff;
+    text-decoration: underline;
+  }
+  
+  .hero {
+    background-color: #A0A0A0; /* Темно-зелений */
+    color: #FFFFFF;
+    padding: 40px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  /* Анімація банера */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .content {
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #FFFFFF; /* Білий фон для блоку */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .visual-el {
+    background: #ccf5ff;
+    color: #6c6c6c;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s; 
+  }
+
+  .visual-el:hover{
+    transform: scale(1.05);
+  }
+
+  .visual-element {
+    background: #A0A0A0;
+    color: #FFFFFF;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s;
+  }
+
+.visual-elem {
+    background: #6c6c6c;
+    color: #ccf5ff;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /*transition: background-color 0.5s;*/
+    transition: background-color 3s ease, color 3s ease, transform 1s ease; /* Додаємо перехід для анімації */
+    opacity: 0; /* Початкова непрозорість */
+    transform: translateY(-100px); /* Початкове положення елемента зліва */
+  }
+
+  /* Анімація для зміни кольору та фону */
+.visual-elem.active {
+  background-color: #A0A0A0; /* Новий колір фону */
+  color: #FFFFFF; /* Новий колір тексту */
+  opacity: 1; /* Зробити елемент видимим */
+  transform: translateY(0); /* Переміщуємо елемент на своє місце */
+}
+
+  .visual-element:hover{
+    transform: scale(1.05);
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+}
+  
+  .visual-element button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #2a2a72;
+    background: #fff;
+    border: 2px solid #2a2a72;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .visual-element button:hover {
+    background-color: #2a2a72;
+    color: #fff;
+  }
+  
+  footer {
+    background-color: #6c6c6c; /* Темний фон */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p, footer ul {
+    margin: 10px 0; /* Додає відступи між елементами */
+}
+
+footer ul {
+    list-style: none; /* Видаляє маркери списку */
+    padding: 0;
+}
+
+footer ul li {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #ccf5ff; /* Золотий колір для посилань */
+    text-decoration: none; /* Видаляє підкреслення */
+    transition: color 0.3s; /* Плавна зміна кольору */
+}
+
+footer a:hover {
+    color: #FFFFFF; /* Темніший золотий при наведенні */
+}
+  
+  /* Анімація кнопки */
+  button:active {
+    transform: scale(0.95);
+  }
+
+  /* Адаптація для планшетів (ширина екрану до 768px) */
+@media (max-width: 768px) {
+  nav ul li {
+      display: block;
+      margin: 10px 0;
+  }
+  .hero h2 {
+      font-size: 1.8rem;
+  }
+  .content {
+      padding: 15px;
+  }
+}
+
+/* Адаптація для смартфонів (ширина екрану до 480px) */
+@media (max-width: 480px) {
+  header h1 {
+      font-size: 1.8rem;
+  }
+  nav ul {
+      text-align: left;
+      padding: 0 10px;
+  }
+  .hero h2 {
+      font-size: 1.5rem;
+  }
+  .content {
+      padding: 10px;
+  }
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 20px; /* Збільшує відстань між абзацами */
+}
+
+/* Стиль для елементів, які з'являються при скролі */
+.fade-in-text {
+  opacity: 0; /* Початкова непрозорість */
+  transform: translateY(-100px); /* Початкове положення зліва */
+  transition: opacity 3s ease, transform 1s ease; /* Плавний перехід */
+}
+
+/* Клас для елементів, що стали видимими */
+.fade-in-text.visible {
+  opacity: 1; /* Повна видимість */
+  transform: translateY(0); /* Позиція елемента після анімації */
+}
+
+
+/* Контейнер для галереї */
+.dynamic-gallery {
+  display: flex;
+  flex-wrap: wrap; /* Дозволяє переносити блоки на новий рядок */
+  justify-content: space-between;
+  padding: 10px 20px;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Стиль для текстових блоків */
+.gallery-item {
+  flex: 1 1 calc(50% - 10px); /* Кожен блок займатиме третину ширини рядка */
+  background-color: #A0A0A0;
+  color: #FFFFFF;
+  border: 2px solid #ccf5ff;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, flex 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Ефект наведення */
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery { 
+  display: flex; 
+  justify-content: space-around; 
+}
+
+.gallery img { 
+  width: auto; 
+  height: auto; 
+  cursor: pointer; 
+}
+  
+  
+.video-container {
+  position: relative;
+  width: 100%; /* Контейнер розтягується на всю ширину батьківського елемента */
+  padding-bottom: 56.25%; /* Пропорція 16:9 (9/16 = 0.5625) */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ширина відео відповідає ширині контейнера */
+  height: 100%; /* Висота залежить від пропорції */
+  border: 0;
+}
